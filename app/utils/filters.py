@@ -7,8 +7,11 @@ print(format_date(datetime.now()))
 def format_url(url):
     return url.replace('http://', '').replace('https://', '').replace('www.', '').split('/')[0].split('?')[0]
 
-def format_plural(amount, word):
-  if amount != 1:
-    return word + 's'
-  return word
 
+def format_plural(amount, word):
+  if amount == 1:
+    return word 
+  else:
+     return str(word) + 's'
+  
+  return word
